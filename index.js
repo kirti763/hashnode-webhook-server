@@ -3,8 +3,8 @@ const app = express();
 app.use(express.json());
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO_OWNER = 'keploy';
-const REPO_NAME = 'community-blog';
+const REPO_OWNER = 'kirti763';
+const REPO_NAME = 'hashnode-webhook-server';
 
 app.post('/webhook', async (req, res) => {
   try {
