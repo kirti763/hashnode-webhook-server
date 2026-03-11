@@ -23,6 +23,8 @@ async function pushToGitHub(filename, content, commitMessage) {
       sha = existing.sha;
     }
   } catch (err) {
+  console.log('File does not exist yet, will create new:', err.message);
+}
   }
 
   const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filename}`, {
